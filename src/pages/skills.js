@@ -104,6 +104,11 @@ const Skills = () => (
 	   oformaterad vanlig text på skärmen. Du kan inte ens lägga till bilder 
 	   på en sida utan HTML!
     </p>
+    <h2>JavaScript</h2>
+	<p>Med JavaScript kan du lägga till en ton mer funktionalitet till webbplatser. Du kan till och med skapa en hel del grundläggande webbapplikation med ingenting annat än HTML, CSS och JavaScript. På den mest grundläggande nivån kan du lägga till många interaktiva element på webbplatser. Med JavaScript är det möjligt att skapa saker som kartor som uppdateras i realtid, interaktiva filmer och onlinespel. Sidor som Pinterest använder tungt JavaScript för att göra användargränssnittet så enkelt för användaren att använda. <br />
+	   Det är också det mest populära programmeringsspråket i världen, så det är super värdefull att ha kunskap inom som Frontendutvecklare.
+    </p>
+
     </div>
     </div>
     

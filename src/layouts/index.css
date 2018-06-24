@@ -626,7 +626,7 @@ pre tt:after {
 }
 .logaFooter {
     
-    display: flex;
+ 
     margin: 0 auto;
     left: 0;
     right: 0; 
@@ -767,7 +767,8 @@ ul li a:hover {
 .workspace {
 	padding: 0;
 	margin: 0 auto;
-	display: flex;
+	display: block;
+	text-align: center;
 
 }
 .workspace img {
@@ -848,95 +849,219 @@ ul li a:hover {
 
 
 /*FOOTER*/
-.foooter{
-  color: white;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  width:100%;
-  height:50;
-  margin-top: 10px;
-  z-index: 99;
-  left: 0;
-}
-.foooter:hover .signature{
-  background-color:rgba(13,12,29,0.75);
-}
-.foooter:hover .icons-social{
-  border-top-right-radius:1rem;
-  border-top-left-radius:1rem;
-}
-.icons-social a{
-  font-size:12px;
-  align-items:flex-end;
-  color: white;
-  flex:1;
-  padding:10px 14px;
-  border-top-right-radius:1rem;
-  border-top-left-radius:1rem;
-}
-.foooter a{
-  -webkit-transition: all .125s ease-in;
-  -moz-transition: all .125s ease-in;
-  -o-transition: all .125s ease-in;
-  transition: all .125s ease-in;
+
+
+.NoneM {
+	margin:0;
+	padding:0;
+
 }
 
-.icons-social{
-  -webkit-transition: all .125s ease-in;
-  -moz-transition: all .125s ease-in;
-  -o-transition: all .125s ease-in;
-  transition: all .125s ease-in;
+/* testar */
+.container {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  
 }
-.signature{
-  -webkit-transition: all .125s ease-in;
-  -moz-transition: all .125s ease-in;
-  -o-transition: all .125s ease-in;
-  transition: all .125s ease-in;
-  background-color:rgba(13,12,29,0.5);
-  display: flex;
-  justify-content:center;
-  align-content:center;
-  flex-direction:column;
+
+.button {
+  position: relative;
+  margin: 30px;
 }
-.facebook{
-  background-color: rgba(59,89,152,0.5);
+.button .fa {
+  font-size: 36px;
 }
-.facebook:hover {
-  background-color:#3B5998;
+
+.text {
+  color: #50514F;
+  position: absolute;
+  font-size: 30px;
+  vertical-align: middle;
+  width: 60px;
+  height: 60px;
 }
-.linkedin{
-  background-color: rgba(0,123,182,0.5);
+
+.tooltip {
+  visibility: hidden;
+  position: absolute;
+  display: inline-block;
 }
-.linkedin:hover{
-  background-color:#007bb6;
+
+.fa:hover {
+  opacity: 0.5;
 }
-.google{
-  background-color: rgba(216,75,55,0.5);
+
+.button:hover .tooltip {
+  visibility: visible;
+  width: 150px;
+  color: #50514F;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 5px;
 }
-.google:hover{
-  background-color:#D84B37;
+
+/* POSITIONS */
+.L {
+  top: 3px;
+  right: 135%;
 }
-.github{
-  background-color: rgba(1,1,1,0.5);
-  color: rgba(254,254,254,0.5);
+.L::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  /* To the right of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent white;
 }
-.github:hover{
-  color: #FEFEFE;
-  background-color:#010101;
+
+.R {
+  top: 5px;
+  left: 135%;
 }
-.fcc{
-  background-color: rgba(0,100,0,0.5);
+.R::before {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
 }
-.fcc:hover{
-  background-color:rgba(0,100,0,0.8);
+
+.T {
+  margin-left: -70px;
+  bottom: 130%;
+  left: 50%;
+  animation: swing 3s ease;
 }
-.signature{
-  padding: 5px;
+.T::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
 }
-.signature-text{
-  font-size:12px !important;
-  margin-bottom:2.5px;
+
+.B {
+  width: 120px;
+  top: 135%;
+  left: 50%;
+  margin-left: -60px;
+}
+.B::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+}
+
+/* STYLE COLOR */
+.one {
+  color: #438496;
+}
+.one a {
+  text-decoration: none;
+  color: #ED6A5A;
+}
+.one:hover .tooltip {
+  background-color: white;
+}
+
+.two {
+  color: #9BC1BC;
+}
+.two a {
+  text-decoration: none;
+  color: #9BC1BC;
+}
+.two:hover .tooltip {
+  background-color: white;
+}
+
+.three {
+  color: #5CA4A9;
+}
+.three a {
+  text-decoration: none;
+  color: #5CA4A9;
+}
+.three:hover .tooltip {
+  background-color: white;
+}
+
+.four {
+  color: #F4F1BB;
+}
+.four a {
+  text-decoration: none;
+  color: #F4F1BB;
+}
+.four:hover .tooltip {
+  background-color: white;
+}
+
+.extraSM {
+	height: 50px;
+	width: 50px;
+}
+.contactCont h5 {
+	color: white;
+}
+
+/* ANIMACIONES */
+@keyframes swing {
+  0% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  50% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(10);
+    transform: translateX(10);
+  }
+}
+
+.davidszmak {
+	width: 100%;
+	display:flex;
+	flex-direction: row-reverse;
+	
+}
+.davidszmak img {
+	margin-bottom: 0px;
+	width: 30%;
+	height: 100%;
+	
+}
+
+.wrapAbout h1 {
+	width: 65%;
+}
+.wrapAbout p {
+	width: 65%;
+}
+.davidsOM {
+    padding-right: 20px;
+    width: 70%;
+}
+
+.davids2 {
+    width: 83%;
+    padding-top: 20px;
 }

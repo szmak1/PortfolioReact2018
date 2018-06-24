@@ -17,7 +17,7 @@ import Ds from '../assets/ds.png'
 const Project = () => (
 		<div style={{
      	
-      paddingBottom: '20',
+      paddingBottom: '32',
  
 }}>
 		<div className="wrapperVessel">

@@ -4,9 +4,8 @@ import Helmet from 'react-helmet'
 
 import Header from '../components/header'
 import Menu from '../components/menu'
-import logo from '../assets/loga.png'
+import logo from '../assets/logaa.svg'
 import Footer from '../components/footer'
-
 
 
 import './index.css'
@@ -16,6 +15,8 @@ let	secondary = '#CD5360';
  let   tertiary = '#B37D4E';
   let  quartenary = '#438496';
 */
+
+
 
 const Layout = ({ children, data }) => (
   <div>
@@ -30,7 +31,9 @@ const Layout = ({ children, data }) => (
       	]}
     /> 
     <div className="vessel">
+    <a href="#" target="_self">
     <div className="loga"><img src={logo} alt="Logo" /></div>
+    </a>
     <Header siteTitle={data.site.siteMetadata.title} >
     
     </Header>
@@ -40,11 +43,12 @@ const Layout = ({ children, data }) => (
         margin: '0 auto',
         
         
-        paddingTop: 12,
+        paddingTop: 20,
       }}
     >
       {children()}
     </div>
+   
     <Footer className="footer">
    
     </Footer>
